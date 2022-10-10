@@ -1,5 +1,83 @@
 .board{
-    width: 500px;
-    height: 500px;
+    width: 650px;
+    height: 650px;
     display: grid;
+    border: 4px solid purple;
+    background-color: white;
+    padding-left: 30px;
 }
+
+body{
+    background-image: url("/bg.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+h1{
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: #000 1px 1px 4px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.buttons > button:hover{
+    transform: scale(.90);
+}
+
+.buttons > button:active{
+    transform: scale(1.1);
+}
+
+input[type="color"]:hover{
+    transform: scale(.90);
+}
+
+input[type="color"]:active{
+    transform: scale(1.1);
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    all: unset;
+    margin: 15px;
+    padding: 0;
+
+}
+
+#picker{
+    border: 2px solid black;
+    margin-top: 20px;
+}
+input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+}
+
+.buttons{
+    margin-right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid black;
+    border-radius: 25px;
+}
+
+input[type="range"] {
+    margin: 0;
+    padding: 0;
+    transform: rotate(270deg);
+    accent-color: #c775b5;
+ }

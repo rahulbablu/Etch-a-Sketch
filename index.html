@@ -5,23 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Etch-a-Sketch</title>
 </head>
 <body>
     <div class="flex-container">
-        <div class="title"><h1>Etch-a-Sketch</h1></div>
         <div class="content">
-            <div class="board"></div>
-            <div class="buttons">
-                <button onclick="changeColor('black')">Black</button>
-                <button onclick="changeColor('white')">Eraser</button>
-                <button onclick="changeColor('gray')">Gray</button>
-                <button onclick="changeColor('random')">Random</button>
-                <button onclick="resetBoard()">Reset</button>
-                <button id="power">Power</button>
-            </div>
-            <div>
-                <input type="range" min="16" value="16" onchange="changeSize(this.value)">
+            <div class="title"><h1>Etch-a-Sketch</h1></div>
+            <div id="container">
+                <div class="buttons">
+                <button id="black" onclick="changeColor('black')"><i class="fa-solid fa-square fa-3x"></i></button>
+                <button id="eraser" onclick="changeColor('white')"><i class="fa-solid fa-eraser fa-3x"></i></button>
+                <input onchange="changeColor(this.value)" type="color" id="picker" value="#808080">
+                <button id="random" onclick="changeColor('random')"><i class="fa-solid fa-shuffle fa-3x"></i></button>
+                <button id="reset" onclick="resetBoard()"><i class="fa-solid fa-trash fa-3x"></i></button>
+                 </div>
+                <div class="board"></div>
+                <div><input id="slider" type="range" min="16" value="16" onchange="changeSize(this.value)">
+                </div>
             </div>
         </div>
     </div>

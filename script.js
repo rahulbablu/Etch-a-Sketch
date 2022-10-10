@@ -36,6 +36,8 @@ function colorSquare(){
 
 function changeColor(choice){
     color = choice;
+    console.log(color)
+
 }
 
 function resetBoard(){
@@ -52,8 +54,8 @@ document.querySelector(".board").addEventListener("click", () => {
 
 function brushOnOff(){
     if(click == true){
-        document.getElementById("power").style.backgroundColor = "green";
+        document.querySelector(".buttons").style.borderColor = "green";
     }else{
-        document.getElementById("power").style.backgroundColor = "red";
+        document.querySelector(".buttons").style.borderColor = "red";
     }
 }
